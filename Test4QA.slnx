@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../PlantApp.Core/PlantApp.Core.csproj" />
+  <Project Path="../PlantApps.Tests/PlantApp.Tests.csproj" />
+</Solution>
