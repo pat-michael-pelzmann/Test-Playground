@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlantApp.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75e67b7aea1f14676bb6045456991b1fde6ee94c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed74436bd47776b53764578ff046bfb1d3b372aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlantApp.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlantApp.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

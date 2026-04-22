@@ -209,3 +209,14 @@ C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\obj\Debug\net10.0\refint\Plan
 C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\obj\Debug\net10.0\PlantApp.Tests.pdb
 C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\obj\Debug\net10.0\PlantApp.Tests.genruntimeconfig.cache
 C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\obj\Debug\net10.0\ref\PlantApp.Tests.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\bin\Debug\net10.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\bin\Debug\net10.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\bin\Debug\net10.0\Microsoft.Extensions.Logging.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\bin\Debug\net10.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\bin\Debug\net10.0\Microsoft.Extensions.Options.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Tests\bin\Debug\net10.0\Microsoft.Extensions.Primitives.dll
