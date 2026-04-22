@@ -96,4 +96,4 @@ namespace PlantApp.Tests
             Assert.Equal(2, result);
         }
     }
-}
+} //Kommentar
