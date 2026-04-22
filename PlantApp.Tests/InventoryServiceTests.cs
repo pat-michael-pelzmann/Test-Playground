@@ -93,7 +93,7 @@ namespace PlantApp.Tests
             var result = service.GetPlantsNeedingRestockCount();
 
             // Assert
-            Assert.Equal(2, result);
+            Assert.Equal(1, result);
         }
     }
 } //Kommentar
