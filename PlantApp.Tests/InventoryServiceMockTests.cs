@@ -59,7 +59,7 @@ namespace PlantApp.Tests
 
             // Verify (wichtig: Verhalten prüfen, nicht nur Ergebnis)
             // Frage: wurde die Funktion genau 1-mal aufgerufen?
-            mockRepo.Verify(repo => repo.GetAllPlants(), Times.Never);
+            mockRepo.Verify(repo => repo.GetAllPlants(), Times.Once);
         }
     }
 }
