@@ -33,7 +33,33 @@ namespace PlantApp.Tests
 
             // Assert
             Assert.Equal(2, result);
+
+            // Verify (wichtig: Verhalten prüfen, nicht nur Ergebnis)
+            // Frage: wurde die Funktion genau 1-mal aufgerufen?
+            mockRepo.Verify(repo => repo.GetAllPlants(), Times.Once);
+        }
+
+        [Fact]
+        public void Should_Return_Zero_When_No_Plants()
+        {
+            // Arrange
+            var mockRepo = new Mock<IPlantRepository>();
+
+            mockRepo
+                .Setup(repo => repo.GetAllPlants())
+                .Returns(new List<Plant>());
+
+            var service = new InventoryService(mockRepo.Object);
+
+            // Act
+            var result = service.GetPlantsNeedingRestockCount();
+
+            // Assert
+            Assert.Equal(0, result);
+
+            // Verify (wichtig: Verhalten prüfen, nicht nur Ergebnis)
+            // Frage: wurde die Funktion genau 1-mal aufgerufen?
+            mockRepo.Verify(repo => repo.GetAllPlants(), Times.Once);
         }
     }
-
 }
