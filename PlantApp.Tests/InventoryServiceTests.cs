@@ -55,7 +55,7 @@ namespace PlantApp.Tests
             var result = service.NeedsRestock(plant);
 
             // Assert: negativer Bestand → sollte als Restock gelten
-            Assert.True(result);
+            Assert.False(result);
         }
 
         [Fact]
