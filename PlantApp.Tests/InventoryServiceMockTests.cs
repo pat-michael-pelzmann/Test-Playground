@@ -15,9 +15,9 @@ namespace PlantApp.Tests
             // Arrange
             var plants = new List<Plant>
              {
-                new Plant { Stock = 5, MinimumStock = 10 },
-                new Plant { Stock = 10, MinimumStock = 8 },
-                new Plant { Stock = 3, MinimumStock = 8 },
+                new Plant { Stock = 5, MinimumStock = 10 },     // Restock
+                new Plant { Stock = 20, MinimumStock = 10 },    // OK
+                new Plant { Stock = 3, MinimumStock = 8 },      // Restock
              };
 
             var mockRepo = new Mock<IPlantRepository>();
