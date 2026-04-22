@@ -9,3 +9,15 @@ C:\Users\pe\source\repos\PlantApp.Core\obj\Debug\net10.0\PlantApp.Core.dll
 C:\Users\pe\source\repos\PlantApp.Core\obj\Debug\net10.0\refint\PlantApp.Core.dll
 C:\Users\pe\source\repos\PlantApp.Core\obj\Debug\net10.0\PlantApp.Core.pdb
 C:\Users\pe\source\repos\PlantApp.Core\obj\Debug\net10.0\ref\PlantApp.Core.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\bin\Debug\net10.0\PlantApp.Core.deps.json
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\bin\Debug\net10.0\PlantApp.Core.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\bin\Debug\net10.0\PlantApp.Core.pdb
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\obj\Debug\net10.0\PlantApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\obj\Debug\net10.0\PlantApp.Core.AssemblyInfoInputs.cache
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\obj\Debug\net10.0\PlantApp.Core.AssemblyInfo.cs
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\obj\Debug\net10.0\PlantApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\obj\Debug\net10.0\PlantApp.Core.sourcelink.json
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\obj\Debug\net10.0\PlantApp.Core.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\obj\Debug\net10.0\refint\PlantApp.Core.dll
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\obj\Debug\net10.0\PlantApp.Core.pdb
+C:\Users\pe\source\repos\Repo Clone\PlantApp.Core\obj\Debug\net10.0\ref\PlantApp.Core.dll

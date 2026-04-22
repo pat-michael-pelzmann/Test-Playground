@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pe\\source\\repos\\PlantApp.Core\\PlantApp.Core.csproj": {}
+    "C:\\Users\\pe\\source\\repos\\Repo Clone\\PlantApp.Core\\PlantApp.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pe\\source\\repos\\PlantApp.Core\\PlantApp.Core.csproj": {
+    "C:\\Users\\pe\\source\\repos\\Repo Clone\\PlantApp.Core\\PlantApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pe\\source\\repos\\PlantApp.Core\\PlantApp.Core.csproj",
+        "projectUniqueName": "C:\\Users\\pe\\source\\repos\\Repo Clone\\PlantApp.Core\\PlantApp.Core.csproj",
         "projectName": "PlantApp.Core",
-        "projectPath": "C:\\Users\\pe\\source\\repos\\PlantApp.Core\\PlantApp.Core.csproj",
+        "projectPath": "C:\\Users\\pe\\source\\repos\\Repo Clone\\PlantApp.Core\\PlantApp.Core.csproj",
         "packagesPath": "C:\\Users\\pe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pe\\source\\repos\\PlantApp.Core\\obj\\",
+        "outputPath": "C:\\Users\\pe\\source\\repos\\Repo Clone\\PlantApp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",

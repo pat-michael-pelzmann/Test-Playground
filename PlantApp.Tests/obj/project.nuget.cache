@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FyBJzagLYTI=",
+  "dgSpecHash": "AwGbMl/PpqY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pe\\source\\repos\\PlantApps.Tests\\PlantApp.Tests.csproj",
+  "projectFilePath": "C:\\Users\\pe\\source\\repos\\Repo Clone\\PlantApp.Tests\\PlantApp.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pe\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\pe\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
