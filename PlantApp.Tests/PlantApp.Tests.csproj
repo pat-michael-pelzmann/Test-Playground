@@ -40,4 +40,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+	<Using Include="coverlet.collector" Version="6.0.0" />
+  </ItemGroup>
+
 </Project>
