@@ -1,6 +1,8 @@
 name: Integration Tests (Docker)
 
 on:
+  push:
+    branches: ["main"]
   pull_request:
     branches: ["main"]
     paths:
@@ -9,21 +11,47 @@ on:
       - "docker-compose.yml"
       - "Dockerfile"
 
-  push:
-    branches: ["main"]
-
 jobs:
   integration-tests:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # Code holen
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Run Docker Integration Tests
+      # Docker prüfen
+      - name: Verify Docker
+        run: docker --version
+
+      # TestResults Ordner vorbereiten
+      - name: Prepare TestResults folder
+        run: mkdir -p TestResults
+
+      # Docker Compose starten
+      - name: Run Integration Tests via Docker Compose
         run: |
           docker compose down -v
           docker compose up --build --abort-on-container-exit
 
+      # TRX hochladen
+      - name: Upload Integration Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: integration-test-results
+          path: TestResults/*.trx
+
+      # (Optional) Anzeige im UI
+      - name: Publish Integration Test Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Integration Tests
+          path: TestResults/*.trx
+          reporter: dotnet-trx
+
+      # Cleanup
       - name: Cleanup
         if: always()
         run: docker compose down -v
