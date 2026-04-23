@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Dockerfile.txt" />
+  </Folder>
   <Project Path="PlantApp.Core/PlantApp.Core.csproj" />
   <Project Path="PlantApp.Tests/PlantApp.Tests.csproj" />
 </Solution>
