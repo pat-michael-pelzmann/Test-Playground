@@ -1,9 +1,11 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0
 
 WORKDIR /src
+
 COPY . .
 
-RUN dotnet restore
-RUN dotnet build --no-restore
+RUN dotnet restore Test4QA.sln
 
-CMD ["dotnet", "test", "PlantApp.Tests/PlantApp.Tests.csproj", "--no-build", "--logger:trx"]
+RUN dotnet build Test4QA.sln --no-restore
+
+CMD ["dotnet", "test", "Test4QA.sln", "--no-build", "--logger:trx;LogFileName=TestResults/tests.trx"]
