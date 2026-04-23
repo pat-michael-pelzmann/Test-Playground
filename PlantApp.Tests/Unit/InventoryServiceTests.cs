@@ -8,9 +8,9 @@ namespace PlantApp.Tests.Unit
     [Trait("Category", "Unit")]        // Trait, um in der CI Pipeline leichter filtern zu können
     public class InventoryServiceTests
     {
-        // ============================================
+        // ===========================================
         // 🟢 UNIT TESTS – BASIC BUSINESS LOGIC
-        // ============================================
+        // ===========================================
 
         [Theory]
         [InlineData(5, 10, true)]   // unter Minimum → Restock nötig
@@ -35,9 +35,9 @@ namespace PlantApp.Tests.Unit
             Assert.Equal(expected, result);
         }
 
-        // ============================================
+        // ===========================================
         // 🟡 EDGE CASES – GRENZFÄLLE
-        // ============================================
+        // ===========================================
 
         [Fact]
         public void NeedsRestock_ShouldHandleNegativeStock()
