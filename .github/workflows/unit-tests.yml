@@ -25,18 +25,26 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      # Build Steps
+      # Restore
       - name: Restore dependencies
         run: dotnet restore
 
+      # Build
       - name: Build
         run: dotnet build --no-restore
 
-      # Tests mit TRX
-      - name: Run Unit Tests
-        run: dotnet test --no-build --filter Category=Unit --logger "trx;LogFileName=unit-tests.trx"
+      # ----------------------------
+      # UNIT TESTS + COVERAGE
+      # ----------------------------
+      - name: Run Unit Tests with Coverage
+        run: dotnet test --no-build \
+          --filter Category=Unit \
+          --logger "trx;LogFileName=unit-tests.trx" \
+          --collect:"XPlat Code Coverage"
 
-      # TRX hochladen
+      # ----------------------------
+      # TEST RESULTS (TRX)
+      # ----------------------------
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@v4
         if: always()
@@ -44,7 +52,6 @@ jobs:
           name: unit-test-results
           path: "**/*.trx"
 
-      # (Optional) schöne Anzeige im GitHub UI
       - name: Publish Unit Test Report
         uses: dorny/test-reporter@v1
         if: always()
@@ -52,3 +59,23 @@ jobs:
           name: Unit Tests
           path: "**/*.trx"
           reporter: dotnet-trx
+
+      # ----------------------------
+      # COVERAGE REPORT (optional, aber empfohlen)
+      # ----------------------------
+      - name: Install ReportGenerator
+        run: dotnet tool install -g dotnet-reportgenerator-globaltool
+
+      - name: Generate Coverage Report
+        run: |
+          reportgenerator \
+            -reports:**/coverage.cobertura.xml \
+            -targetdir:coveragereport \
+            -reporttypes:Html
+
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-report
+          path: coveragereport
