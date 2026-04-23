@@ -7,6 +7,7 @@ using PlantApp.Core;
 
 namespace PlantApp.Tests.Unit
 {
+    [Trait("Category", "Unit")]        // Trait, um in der CI Pipeline leichter filtern zu können
     public class InventoryServiceMockTests
     {
         [Fact]

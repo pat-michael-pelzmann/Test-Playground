@@ -4,8 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using PlantApp.Core;
 using Xunit;
 
-namespace PlantApp.Tests
+namespace PlantApp.Tests.Integration
 {
+    [Trait("Category", "Integration")]           // Trait, um in der CI Pipeline leichter filtern zu können
     public class InventoryServiceDockerIntegrationTests
     {
         private AppDbContext CreateDbContext()
