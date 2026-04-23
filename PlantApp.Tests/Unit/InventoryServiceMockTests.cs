@@ -5,7 +5,7 @@ using Moq;
 using Xunit;
 using PlantApp.Core;
 
-namespace PlantApp.Tests
+namespace PlantApp.Tests.Unit
 {
     public class InventoryServiceMockTests
     {
