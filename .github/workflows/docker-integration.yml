@@ -1,0 +1,31 @@
+name: Integration Tests (Docker Compose)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  integration-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Code auschecken
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Docker prüfen
+      - name: Check Docker
+        run: docker --version
+
+      # 3. Integration Tests starten
+      - name: Run Docker Compose Integration Tests
+        run: |
+          docker compose down -v
+          docker compose up --build --abort-on-container-exit
+
+      # 4. Cleanup (immer ausführen)
+      - name: Cleanup Docker environment
+        if: always()
+        run: docker compose down -v
