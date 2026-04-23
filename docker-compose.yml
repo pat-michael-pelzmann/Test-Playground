@@ -14,6 +14,7 @@ services:
       timeout: 5s
       retries: 10
 
+  services:
   tests:
     build: .
     depends_on:
@@ -21,7 +22,14 @@ services:
         condition: service_healthy
     environment:
       DB_CONNECTION: Host=db;Database=plants;Username=plant;Password=plant
-    command: ["dotnet", "test", "PlantApp.Tests/PlantApp.Tests.csproj", "--no-build", "--logger:trx"]
+    volumes:
+      - ./TestResults:/app/TestResults
+    command: [
+      "dotnet", "test",
+      "PlantApp.Tests/PlantApp.Tests.csproj",
+      "--no-build",
+      "--logger:trx;LogFileName=/app/TestResults/integration-tests.trx"
+    ]
 
 volumes:
   db_data:
