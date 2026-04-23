@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "qmAJhzuQ1rA=",
+  "dgSpecHash": "wrQ4osoil4E=",
   "success": true,
   "projectFilePath": "C:\\Users\\pe\\source\\repos\\Repo Clone\\PlantApp.Tests\\PlantApp.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pe\\.nuget\\packages\\aspire.npgsql.entityframeworkcore.postgresql\\13.2.3\\aspire.npgsql.entityframeworkcore.postgresql.13.2.3.nupkg.sha512",
     "C:\\Users\\pe\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "C:\\Users\\pe\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\pe\\.nuget\\packages\\coverlet.collector\\10.0.0\\coverlet.collector.10.0.0.nupkg.sha512",
     "C:\\Users\\pe\\.nuget\\packages\\docker.dotnet.enhanced\\4.1.0\\docker.dotnet.enhanced.4.1.0.nupkg.sha512",
     "C:\\Users\\pe\\.nuget\\packages\\docker.dotnet.enhanced.handler.abstractions\\4.1.0\\docker.dotnet.enhanced.handler.abstractions.4.1.0.nupkg.sha512",
     "C:\\Users\\pe\\.nuget\\packages\\docker.dotnet.enhanced.legacyhttp\\4.1.0\\docker.dotnet.enhanced.legacyhttp.4.1.0.nupkg.sha512",
