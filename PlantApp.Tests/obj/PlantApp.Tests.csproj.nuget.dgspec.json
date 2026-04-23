@@ -57,6 +57,14 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[10.0.7, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[10.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[10.0.1, )"
             }
           },
           "imports": [
@@ -407,7 +415,21 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[13.2.3, )"
+            },
+            "Docker.DotNet.Enhanced": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[10.0.7, )"
             },
@@ -417,23 +439,33 @@
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.14.1, )"
+              "version": "[18.5.0, )"
             },
             "Moq": {
               "target": "Package",
               "version": "[4.20.72, )"
             },
-            "coverlet.collector": {
+            "Npgsql": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[10.0.2, )"
+            },
+            "Testcontainers": {
+              "target": "Package",
+              "version": "[4.11.0, )"
+            },
+            "Testcontainers.PostgreSql": {
+              "target": "Package",
+              "version": "[4.11.0, )"
             },
             "xunit": {
               "target": "Package",
               "version": "[2.9.3, )"
             },
             "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[3.1.5, )"
             }
           },
           "imports": [

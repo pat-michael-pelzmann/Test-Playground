@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: plant
+      POSTGRES_PASSWORD: plant
+      POSTGRES_DB: plants
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U plant -d plants"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  tests:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_CONNECTION: Host=db;Database=plants;Username=plant;Password=plant
+    command: ["dotnet", "test", "PlantApp.Tests/PlantApp.Tests.csproj", "--no-build", "--logger:trx"]
+
+volumes:
+  db_data:

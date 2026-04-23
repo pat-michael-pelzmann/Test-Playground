@@ -1,0 +1,9 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0
+
+WORKDIR /src
+COPY . .
+
+RUN dotnet restore PlantApp.Tests/PlantApp.Tests.csproj
+RUN dotnet build PlantApp.Tests/PlantApp.Tests.csproj --no-restore
+
+CMD ["dotnet", "test", "PlantApp.Tests/PlantApp.Tests.csproj", "--no-build", "--logger:trx"]
