@@ -4,8 +4,8 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet restore Test4QA.sln
+RUN dotnet restore Test4QA.slnx
 
-RUN dotnet build Test4QA.sln --no-restore
+RUN dotnet build Test4QA.slnx --no-restore
 
-CMD ["dotnet", "test", "Test4QA.sln", "--no-build", "--logger:trx;LogFileName=TestResults/tests.trx"]
+CMD ["dotnet", "test", "Test4QA.slnx", "--no-build", "--logger:trx;LogFileName=TestResults/tests.trx"]
