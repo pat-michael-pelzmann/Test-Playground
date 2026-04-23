@@ -1,31 +1,29 @@
-name: Integration Tests (Docker Compose)
+name: Integration Tests (Docker)
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
+    paths:
+      - "PlantApp.Core/**"
+      - "PlantApp.Tests/Integration/**"
+      - "docker-compose.yml"
+      - "Dockerfile"
+
+  push:
+    branches: ["main"]
 
 jobs:
   integration-tests:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Code auschecken
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      # 2. Docker prüfen
-      - name: Check Docker
-        run: docker --version
-
-      # 3. Integration Tests starten
-      - name: Run Docker Compose Integration Tests
+      - name: Run Docker Integration Tests
         run: |
           docker compose down -v
           docker compose up --build --abort-on-container-exit
 
-      # 4. Cleanup (immer ausführen)
-      - name: Cleanup Docker environment
+      - name: Cleanup
         if: always()
         run: docker compose down -v
