@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="54a9803a-511b-40db-8bd5-194d7e554165" name="@2f988b0677a2 2026-04-23 12:52:37" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-04-23T12:52:37.4112245+00:00" queuing="2026-04-23T12:52:37.4112246+00:00" start="2026-04-23T12:52:36.5510133+00:00" finish="2026-04-23T12:52:38.3967584+00:00" />
+  <TestSettings name="default" id="309ccd5f-e524-49f1-a8be-d29ac7f647e8">
+    <Deployment runDeploymentRoot="_2f988b0677a2_2026-04-23_12_52_37" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="fb00660c-6647-4963-aae9-56686484e458" testId="db1a5c56-92ec-c9a2-9032-b8a898f98170" testName="PlantApp.Tests.Unit.InventoryServiceTests.NeedsRestock_ShouldReturnExpected(stock: 15, minStock: 10, expected: False)" computerName="2f988b0677a2" duration="00:00:00.0000129" startTime="2026-04-23T12:52:37.2372237+00:00" endTime="2026-04-23T12:52:37.2372984+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb00660c-6647-4963-aae9-56686484e458" />
+    <UnitTestResult executionId="37a4c2aa-3e40-4493-8d2b-347f05a4314b" testId="1d1ced7d-de60-3492-5877-48aa7e53964d" testName="PlantApp.Tests.Unit.InventoryServiceTests.NeedsRestock_ShouldReturnExpected(stock: 5, minStock: 10, expected: True)" computerName="2f988b0677a2" duration="00:00:00.0105544" startTime="2026-04-23T12:52:37.1981613+00:00" endTime="2026-04-23T12:52:37.2210852+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37a4c2aa-3e40-4493-8d2b-347f05a4314b" />
+    <UnitTestResult executionId="a97e21c3-38fb-4dfc-8b90-d5cbb0eeb1cf" testId="5fa3ed33-e8a7-ac7d-498a-d5fada993364" testName="PlantApp.Tests.Integration.InventoryServiceDockerIntegrationTests.Should_Persist_Plant_And_Count_Restock_Correctly" computerName="2f988b0677a2" duration="00:00:01.1002120" startTime="2026-04-23T12:52:37.1963561+00:00" endTime="2026-04-23T12:52:38.3063870+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a97e21c3-38fb-4dfc-8b90-d5cbb0eeb1cf" />
+    <UnitTestResult executionId="155dc62d-a249-4e1a-ac8f-a85d805cde18" testId="012c376e-2151-20ec-c5a5-db5199e83195" testName="PlantApp.Tests.Integration.InventoryServiceEfTests.Should_Persist_And_Read_Plants_Correctly" computerName="2f988b0677a2" duration="00:00:00.0477890" startTime="2026-04-23T12:52:37.9512368+00:00" endTime="2026-04-23T12:52:37.9987568+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="155dc62d-a249-4e1a-ac8f-a85d805cde18" />
+    <UnitTestResult executionId="de7a3ce1-9230-43a8-ab14-61702d36c25e" testId="92844b95-5e86-4d36-e165-8047110244aa" testName="PlantApp.Tests.Unit.InventoryServiceMockTests.Should_Return_Zero_When_No_Plants" computerName="2f988b0677a2" duration="00:00:00.0014762" startTime="2026-04-23T12:52:37.3379892+00:00" endTime="2026-04-23T12:52:37.3380779+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de7a3ce1-9230-43a8-ab14-61702d36c25e" />
+    <UnitTestResult executionId="13e99162-da90-47a7-8a70-00a9ff2bf25c" testId="018c961b-2f5e-c5ac-c416-f868121e37f0" testName="PlantApp.Tests.Unit.InventoryServiceTests.Should_Count_Plants_Needing_Restock_With_FakeRepository" computerName="2f988b0677a2" duration="00:00:00.0032197" startTime="2026-04-23T12:52:37.2388754+00:00" endTime="2026-04-23T12:52:37.2389302+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="13e99162-da90-47a7-8a70-00a9ff2bf25c" />
+    <UnitTestResult executionId="06615b0b-6f5d-447f-a761-f07c217317f1" testId="d50583ca-2ec1-928f-585c-637f8287663d" testName="PlantApp.Tests.Integration.InventoryServiceEfTests.Should_Count_Plants_Needing_Restock_With_InMemoryDb" computerName="2f988b0677a2" duration="00:00:00.7445524" startTime="2026-04-23T12:52:37.1981938+00:00" endTime="2026-04-23T12:52:37.9508784+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06615b0b-6f5d-447f-a761-f07c217317f1" />
+    <UnitTestResult executionId="dbddd87c-766b-4a2b-bb7c-13a7488370cb" testId="8de8a40c-19be-45e0-89c9-5e41b80a0b0b" testName="PlantApp.Tests.Integration.InventoryServiceEfTests.Should_Return_Zero_When_No_Plants_In_Db" computerName="2f988b0677a2" duration="00:00:00.0219432" startTime="2026-04-23T12:52:37.9990973+00:00" endTime="2026-04-23T12:52:38.0209488+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dbddd87c-766b-4a2b-bb7c-13a7488370cb" />
+    <UnitTestResult executionId="8ea360d0-edc4-4648-8317-ac815f12b579" testId="8bee89c4-e620-95ac-e870-9948ac10fc34" testName="PlantApp.Tests.Unit.InventoryServiceTests.NeedsRestock_ShouldReturnExpected(stock: 10, minStock: 10, expected: False)" computerName="2f988b0677a2" duration="00:00:00.0008704" startTime="2026-04-23T12:52:37.2360887+00:00" endTime="2026-04-23T12:52:37.2362022+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ea360d0-edc4-4648-8317-ac815f12b579" />
+    <UnitTestResult executionId="6e8e7f15-cc6a-4d47-ae4e-02b1c4d04523" testId="08eb182d-f946-e2d4-d104-40a4f0c3d562" testName="PlantApp.Tests.Unit.InventoryServiceTests.NeedsRestock_ShouldThrowException_WhenPlantIsNull" computerName="2f988b0677a2" duration="00:00:00.0010681" startTime="2026-04-23T12:52:37.2385704+00:00" endTime="2026-04-23T12:52:37.2386923+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e8e7f15-cc6a-4d47-ae4e-02b1c4d04523" />
+    <UnitTestResult executionId="6140e054-3afd-4026-a532-33a1fd70353a" testId="392a00b6-caa8-9fe9-c537-8dee32521b9b" testName="PlantApp.Tests.Unit.InventoryServiceMockTests.Should_Count_Plants_Needing_Restock_With_Mock" computerName="2f988b0677a2" duration="00:00:00.0905030" startTime="2026-04-23T12:52:37.1980606+00:00" endTime="2026-04-23T12:52:37.2967851+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6140e054-3afd-4026-a532-33a1fd70353a" />
+    <UnitTestResult executionId="5bfae313-bad9-4aba-89da-e7c17a2b4362" testId="ccb5ba13-0389-3d2f-7557-02e412b2e81a" testName="PlantApp.Tests.Unit.InventoryServiceTests.NeedsRestock_ShouldHandleNegativeStock" computerName="2f988b0677a2" duration="00:00:00.0004977" startTime="2026-04-23T12:52:37.2391458+00:00" endTime="2026-04-23T12:52:37.2404641+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5bfae313-bad9-4aba-89da-e7c17a2b4362" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="PlantApp.Tests.Unit.InventoryServiceMockTests.Should_Count_Plants_Needing_Restock_With_Mock" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="392a00b6-caa8-9fe9-c537-8dee32521b9b">
+      <Execution id="6140e054-3afd-4026-a532-33a1fd70353a" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Unit.InventoryServiceMockTests" name="Should_Count_Plants_Needing_Restock_With_Mock" />
+    </UnitTest>
+    <UnitTest name="PlantApp.Tests.Unit.InventoryServiceMockTests.Should_Return_Zero_When_No_Plants" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="92844b95-5e86-4d36-e165-8047110244aa">
+      <Execution id="de7a3ce1-9230-43a8-ab14-61702d36c25e" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Unit.InventoryServiceMockTests" name="Should_Return_Zero_When_No_Plants" />
+    </UnitTest>
+    <UnitTest name="PlantApp.Tests.Integration.InventoryServiceEfTests.Should_Return_Zero_When_No_Plants_In_Db" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="8de8a40c-19be-45e0-89c9-5e41b80a0b0b">
+      <Execution id="dbddd87c-766b-4a2b-bb7c-13a7488370cb" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Integration.InventoryServiceEfTests" name="Should_Return_Zero_When_No_Plants_In_Db" />
+    </UnitTest>
+    <UnitTest name="PlantApp.Tests.Unit.InventoryServiceTests.NeedsRestock_ShouldThrowException_WhenPlantIsNull" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="08eb182d-f946-e2d4-d104-40a4f0c3d562">
+      <Execution id="6e8e7f15-cc6a-4d47-ae4e-02b1c4d04523" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Unit.InventoryServiceTests" name="NeedsRestock_ShouldThrowException_WhenPlantIsNull" />
+    </UnitTest>
+    <UnitTest name="PlantApp.Tests.Integration.InventoryServiceEfTests.Should_Persist_And_Read_Plants_Correctly" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="012c376e-2151-20ec-c5a5-db5199e83195">
+      <Execution id="155dc62d-a249-4e1a-ac8f-a85d805cde18" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Integration.InventoryServiceEfTests" name="Should_Persist_And_Read_Plants_Correctly" />
+    </UnitTest>
+    <UnitTest name="PlantApp.Tests.Unit.InventoryServiceTests.NeedsRestock_ShouldReturnExpected(stock: 10, minStock: 10, expected: False)" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="8bee89c4-e620-95ac-e870-9948ac10fc34">
+      <Execution id="8ea360d0-edc4-4648-8317-ac815f12b579" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Unit.InventoryServiceTests" name="NeedsRestock_ShouldReturnExpected" />
+    </UnitTest>
+    <UnitTest name="PlantApp.Tests.Integration.InventoryServiceDockerIntegrationTests.Should_Persist_Plant_And_Count_Restock_Correctly" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="5fa3ed33-e8a7-ac7d-498a-d5fada993364">
+      <Execution id="a97e21c3-38fb-4dfc-8b90-d5cbb0eeb1cf" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Integration.InventoryServiceDockerIntegrationTests" name="Should_Persist_Plant_And_Count_Restock_Correctly" />
+    </UnitTest>
+    <UnitTest name="PlantApp.Tests.Integration.InventoryServiceEfTests.Should_Count_Plants_Needing_Restock_With_InMemoryDb" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="d50583ca-2ec1-928f-585c-637f8287663d">
+      <Execution id="06615b0b-6f5d-447f-a761-f07c217317f1" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Integration.InventoryServiceEfTests" name="Should_Count_Plants_Needing_Restock_With_InMemoryDb" />
+    </UnitTest>
+    <UnitTest name="PlantApp.Tests.Unit.InventoryServiceTests.NeedsRestock_ShouldHandleNegativeStock" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="ccb5ba13-0389-3d2f-7557-02e412b2e81a">
+      <Execution id="5bfae313-bad9-4aba-89da-e7c17a2b4362" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Unit.InventoryServiceTests" name="NeedsRestock_ShouldHandleNegativeStock" />
+    </UnitTest>
+    <UnitTest name="PlantApp.Tests.Unit.InventoryServiceTests.NeedsRestock_ShouldReturnExpected(stock: 5, minStock: 10, expected: True)" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="1d1ced7d-de60-3492-5877-48aa7e53964d">
+      <Execution id="37a4c2aa-3e40-4493-8d2b-347f05a4314b" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Unit.InventoryServiceTests" name="NeedsRestock_ShouldReturnExpected" />
+    </UnitTest>
+    <UnitTest name="PlantApp.Tests.Unit.InventoryServiceTests.Should_Count_Plants_Needing_Restock_With_FakeRepository" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="018c961b-2f5e-c5ac-c416-f868121e37f0">
+      <Execution id="13e99162-da90-47a7-8a70-00a9ff2bf25c" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Unit.InventoryServiceTests" name="Should_Count_Plants_Needing_Restock_With_FakeRepository" />
+    </UnitTest>
+    <UnitTest name="PlantApp.Tests.Unit.InventoryServiceTests.NeedsRestock_ShouldReturnExpected(stock: 15, minStock: 10, expected: False)" storage="/src/plantapp.tests/bin/debug/net10.0/plantapp.tests.dll" id="db1a5c56-92ec-c9a2-9032-b8a898f98170">
+      <Execution id="fb00660c-6647-4963-aae9-56686484e458" />
+      <TestMethod codeBase="/src/PlantApp.Tests/bin/Debug/net10.0/PlantApp.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PlantApp.Tests.Unit.InventoryServiceTests" name="NeedsRestock_ShouldReturnExpected" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="db1a5c56-92ec-c9a2-9032-b8a898f98170" executionId="fb00660c-6647-4963-aae9-56686484e458" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1d1ced7d-de60-3492-5877-48aa7e53964d" executionId="37a4c2aa-3e40-4493-8d2b-347f05a4314b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5fa3ed33-e8a7-ac7d-498a-d5fada993364" executionId="a97e21c3-38fb-4dfc-8b90-d5cbb0eeb1cf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="012c376e-2151-20ec-c5a5-db5199e83195" executionId="155dc62d-a249-4e1a-ac8f-a85d805cde18" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="92844b95-5e86-4d36-e165-8047110244aa" executionId="de7a3ce1-9230-43a8-ab14-61702d36c25e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="018c961b-2f5e-c5ac-c416-f868121e37f0" executionId="13e99162-da90-47a7-8a70-00a9ff2bf25c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d50583ca-2ec1-928f-585c-637f8287663d" executionId="06615b0b-6f5d-447f-a761-f07c217317f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8de8a40c-19be-45e0-89c9-5e41b80a0b0b" executionId="dbddd87c-766b-4a2b-bb7c-13a7488370cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8bee89c4-e620-95ac-e870-9948ac10fc34" executionId="8ea360d0-edc4-4648-8317-ac815f12b579" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="08eb182d-f946-e2d4-d104-40a4f0c3d562" executionId="6e8e7f15-cc6a-4d47-ae4e-02b1c4d04523" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="392a00b6-caa8-9fe9-c537-8dee32521b9b" executionId="6140e054-3afd-4026-a532-33a1fd70353a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ccb5ba13-0389-3d2f-7557-02e412b2e81a" executionId="5bfae313-bad9-4aba-89da-e7c17a2b4362" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="12" executed="12" passed="12" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 10.0.7)
+[xUnit.net 00:00:00.08]   Discovering: PlantApp.Tests
+[xUnit.net 00:00:00.15]   Discovered:  PlantApp.Tests
+[xUnit.net 00:00:00.18]   Starting:    PlantApp.Tests
+[xUnit.net 00:00:01.33]   Finished:    PlantApp.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
