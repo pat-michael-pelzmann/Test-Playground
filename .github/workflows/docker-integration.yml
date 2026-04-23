@@ -1,31 +1,57 @@
-name: Integration Tests (Docker Compose)
+name: Integration Tests (Docker)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
+    paths:
+      - "PlantApp.Core/**"
+      - "PlantApp.Tests/Integration/**"
+      - "docker-compose.yml"
+      - "Dockerfile"
 
 jobs:
   integration-tests:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Code auschecken
+      # Code holen
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Docker prüfen
-      - name: Check Docker
+      # Docker prüfen
+      - name: Verify Docker
         run: docker --version
 
-      # 3. Integration Tests starten
-      - name: Run Docker Compose Integration Tests
+      # TestResults Ordner vorbereiten
+      - name: Prepare TestResults folder
+        run: mkdir -p TestResults
+
+      # Docker Compose starten
+      - name: Run Integration Tests via Docker Compose
         run: |
           docker compose down -v
           docker compose up --build --abort-on-container-exit
 
-      # 4. Cleanup (immer ausführen)
-      - name: Cleanup Docker environment
+      # TRX hochladen
+      - name: Upload Integration Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: integration-test-results
+          path: TestResults/*.trx
+
+      # (Optional) Anzeige im UI
+      - name: Publish Integration Test Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Integration Tests
+          path: TestResults/*.trx
+          reporter: dotnet-trx
+
+      # Cleanup
+      - name: Cleanup
         if: always()
         run: docker compose down -v
