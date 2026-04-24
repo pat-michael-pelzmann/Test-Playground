@@ -37,11 +37,7 @@ jobs:
       # UNIT TESTS + COVERAGE
       # ----------------------------
       - name: Run Unit Tests with Coverage
-        run: dotnet test --no-build \
-          --filter Category=Unit \
-          --logger "trx;LogFileName=unit-tests.trx" \
-          --collect:"XPlat Code Coverage"
-
+        run: dotnet test --no-build --filter "Category=Unit" --logger "trx;LogFileName=unit-tests.trx" --collect:"XPlat Code Coverage"
       # ----------------------------
       # TEST RESULTS (TRX)
       # ----------------------------
