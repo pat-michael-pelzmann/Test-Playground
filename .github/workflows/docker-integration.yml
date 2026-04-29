@@ -1,5 +1,4 @@
 name: Integration Tests (Docker)
-
 on:
   push:
     branches: ["main"]
@@ -18,11 +17,27 @@ permissions:
 jobs:
   integration-tests:
     runs-on: ubuntu-latest
-
     steps:
       # Code holen
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      # .NET Setup + Cache
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+          cache: true
+          cache-dependency-path: '**/*.csproj'
+
+      # NuGet-Cache
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
 
       # Docker prüfen
       - name: Verify Docker
