@@ -1,1 +1,136 @@
+name: Manual Tests
 
+on:
+  workflow_dispatch:
+    inputs:
+      test_category:
+        description: "Welche Tests sollen ausgeführt werden?"
+        required: true
+        type: choice
+        options:
+          - Unit
+          - Integration
+          - All
+        default: All
+
+      dotnet_version:
+        description: ".NET Version"
+        required: false
+        type: string
+        default: "10.0.x"
+
+      run_coverage:
+        description: "Code Coverage generieren?"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  # ─────────────────────────────────────────────
+  # JOB 1: Unit Tests (wenn Unit oder All)
+  # ─────────────────────────────────────────────
+  unit-tests:
+    name: Unit Tests (manuell)
+    runs-on: ubuntu-latest
+    if: ${{ inputs.test_category == 'Unit' || inputs.test_category == 'All' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ inputs.dotnet_version }}
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore
+
+      - name: Run Unit Tests
+        run: |
+          dotnet test --no-build \
+            --filter "Category=Unit" \
+            --logger "trx;LogFileName=unit-tests.trx" \
+            ${{ inputs.run_coverage && '--collect:"XPlat Code Coverage"' || '' }}
+
+      - name: Upload Unit Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: manual-unit-test-results
+          path: "**/*.trx"
+
+      - name: Publish Unit Test Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: "[Manuell] Unit Tests"
+          path: "**/*.trx"
+          reporter: dotnet-trx
+
+      # Coverage nur wenn gewünscht
+      - name: Install ReportGenerator
+        if: ${{ inputs.run_coverage }}
+        run: dotnet tool install -g dotnet-reportgenerator-globaltool
+
+      - name: Generate Coverage Report
+        if: ${{ inputs.run_coverage }}
+        run: |
+          reportgenerator \
+            -reports:**/coverage.cobertura.xml \
+            -targetdir:coveragereport \
+            -reporttypes:Html
+
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v4
+        if: ${{ inputs.run_coverage }}
+        with:
+          name: manual-coverage-report
+          path: coveragereport
+
+  # ─────────────────────────────────────────────
+  # JOB 2: Integration Tests (wenn Integration oder All)
+  # ─────────────────────────────────────────────
+  integration-tests:
+    name: Integration Tests (manuell)
+    runs-on: ubuntu-latest
+    if: ${{ inputs.test_category == 'Integration' || inputs.test_category == 'All' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify Docker
+        run: docker --version
+
+      - name: Prepare TestResults folder
+        run: mkdir -p TestResults
+
+      - name: Run Integration Tests via Docker Compose
+        run: |
+          docker compose down -v
+          docker compose up --build --abort-on-container-exit
+
+      - name: Upload Integration Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: manual-integration-test-results
+          path: TestResults/*.trx
+
+      - name: Publish Integration Test Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: "[Manuell] Integration Tests"
+          path: TestResults/*.trx
+          reporter: dotnet-trx
+
+      - name: Cleanup
+        if: always()
+        run: docker compose down -v
